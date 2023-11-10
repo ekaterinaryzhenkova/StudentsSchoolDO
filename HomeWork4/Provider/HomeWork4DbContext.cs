@@ -1,8 +1,7 @@
-﻿using Azure;
+﻿using DbModels;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Channels;
 
-namespace DbModels
+namespace Provider
 {
     public class HomeWork4DbContext : DbContext
     {
@@ -12,6 +11,10 @@ namespace DbModels
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(ConnectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
         }
 
         public DbSet<DbClient> Clients { get; set; }
