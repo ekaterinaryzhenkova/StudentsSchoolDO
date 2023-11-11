@@ -27,11 +27,12 @@ namespace Provider
             _dbContext.SaveChanges();
         }
 
-        public void EditClient(Guid clientId)
+        public void EditClient(Guid clientId, string name, string phoneNumber)
         {
             var client = _dbContext.Clients.FirstOrDefault(u => u.Id == clientId);
 
-            client.Name = "Evgenia Medvedeva";
+            client.Name = name;
+            client.PhoneNumber = phoneNumber;
 
             _dbContext.SaveChanges();
         }

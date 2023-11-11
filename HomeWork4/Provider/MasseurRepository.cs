@@ -27,18 +27,18 @@ namespace Provider
             _dbContext.SaveChanges();
         }
 
-        public void EditMasseur(Guid masseurId)
+        public void EditMasseur(Guid masseurId, string name)
         {
-            var masseur = _dbContext.Clients.FirstOrDefault(u => u.Id == masseurId);
+            var masseur = _dbContext.Masseurs.FirstOrDefault(u => u.Id == masseurId);
 
-            masseur.Name = "Anna Medvedeva";
+            masseur.Name = name;
 
             _dbContext.SaveChanges();
         }
 
         public void DeleteMasseur(Guid masseurId)
         {
-            var masseur = _dbContext.Clients.FirstOrDefault(u => u.Id == masseurId);
+            var masseur = _dbContext.Masseurs.FirstOrDefault(u => u.Id == masseurId);
 
             _dbContext.Remove(masseur);
 
