@@ -11,9 +11,6 @@ namespace CLient
 
         public void AddSession(Guid clientId, Guid masseurId, DateTime dateTime)
         {
-            //var client = _clientRepository.GetClient(clientId);
-            //var masseur = _masseurRepository.GetMasseur(masseurId);
-
             var Session = new DbSession
             {
                 Id = Guid.NewGuid(),
@@ -21,8 +18,6 @@ namespace CLient
                 MasseurId = masseurId,
                 DateTime = dateTime,
                 TypeOfMassage = "Thai massage"
-                //Client = client,
-                //Masseur = masseur,
             };
 
             _sessionRepository.CreateSession(Session);
