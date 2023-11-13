@@ -12,8 +12,8 @@ using Provider;
 namespace Provider.Migrations
 {
     [DbContext(typeof(HomeWork4DbContext))]
-    [Migration("20231110191751_CreateTables")]
-    partial class CreateTables
+    [Migration("20231113125328_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

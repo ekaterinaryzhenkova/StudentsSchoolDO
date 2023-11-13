@@ -15,12 +15,6 @@ namespace DbModels
 
         public DbClient Client { get; set; }
         public DbMasseur Masseur { get; set; }
-
-        public DbSession()
-        {
-            Client = new DbClient();
-            Masseur = new DbMasseur();
-        }
     }
 
     public class DbSessionConfiguration : IEntityTypeConfiguration<DbSession>
@@ -28,10 +22,10 @@ namespace DbModels
         public void Configure(EntityTypeBuilder<DbSession> builder)
         {
             builder.
-                ToTable(DbMasseur.TableName);
+                ToTable(DbSession.TableName);
 
             builder.
-              HasKey(p => p.Id);
+                HasKey(p => p.Id);
         }
     }
 }

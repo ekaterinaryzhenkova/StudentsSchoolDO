@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Provider
 {
-    internal class MasseurRepository
+    public class MasseurRepository
     {
         private readonly HomeWork4DbContext _dbContext = new();
 

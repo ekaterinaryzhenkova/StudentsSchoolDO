@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Provider
 {
-    internal class ReviewRepository
+    public class ReviewRepository
     {
         private readonly HomeWork4DbContext _dbContext = new();
 

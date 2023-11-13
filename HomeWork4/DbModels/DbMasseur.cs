@@ -33,11 +33,12 @@ namespace DbModels
 
             builder
               .HasMany(p => p.Sessions)
-              .WithOne(n => n.Masseur);
+              .WithOne(n => n.Masseur)
+              .HasForeignKey(s => s.MasseurId);
 
-            builder
-             .HasMany(p => p.Reviews)
-             .WithMany(n => n.Masseurs);
+            /* builder
+              .HasMany(p => p.Reviews)
+              .WithMany(n => n.Masseurs); */
         }
     }
 }
